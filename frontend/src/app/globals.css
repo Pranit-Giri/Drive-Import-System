@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+
+  a {
+    @apply text-slate-100;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto max-w-5xl p-6;
+  }
+
+  .card {
+    @apply rounded-xl border border-slate-800 bg-slate-900/60 backdrop-blur;
+  }
+
+  .card-body {
+    @apply p-5 sm:p-6;
+  }
+
+  .label {
+    @apply text-sm font-medium text-slate-300;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-800 bg-slate-950/60 px-4 py-3
+      text-slate-100 placeholder:text-slate-500 outline-none
+      focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30;
+  }
+
+    .btn {
+      @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5;
+    }
+  }
